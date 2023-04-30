@@ -10,3 +10,16 @@ Once done, the client application is then processed by the risk management servi
 * Note that the commercial service and the risk management one should use some OCR capabilities in order to automate the extraction and processing of the needed information within the uploaded documents.
 
 ## Designed Architecture 
+
+In this architecture , we chose to implement **6 microservices**  :
+* Load Manager
+* Credit Service
+* Risque management Service
+* Commercial Service
+* Registeration Service
+* Mailing Service
+
+When a client submits the form after filling it out with personal information and required documents , a request is sent to the Load Manager. 
+The load manager then redirects it to the registration service that handles the form and an email is sent (by the mailing service) to confirm the registration.
+Once registered , the load manager calls the commercial service to  check the eligibility of the borrower (aka client) and calculates the initial score.
+

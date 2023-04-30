@@ -10,7 +10,7 @@ Once done, the client application is then processed by the risk management servi
 * Note that the commercial service and the risk management one should use some OCR capabilities in order to automate the extraction and processing of the needed information within the uploaded documents.
 
 ## Designed Architecture 
-
+![Architecture](./Architecture.png) <br/>
 In this architecture , we chose to implement **6 microservices**  :
 * Load Manager
 * Credit Service
